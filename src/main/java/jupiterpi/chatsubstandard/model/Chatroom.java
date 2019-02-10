@@ -17,7 +17,35 @@ public class Chatroom {
 	{
 		this.name = name;
 	}
+
+	public String getName ()
+	{
+		return name;
+	}
+
+	public boolean isPrivateRoom ()
+	{
+		return privateRoom;
+	}
+
+	public List<Message> getMessages ()
+	{
+		return messages;
+	}
+
+	public void addUser (User user)
+	{
+		users.add (user);
+	}
+
+	public void removeUser
+
+	public List<User> getUsers ()
+	{
+		return users;
+	}
 	
+	/*
 	public String getName() {
 		return name;
 	}
@@ -42,4 +70,5 @@ public class Chatroom {
 	public void setUsers(List<User> users) {
 		this.users = users;
 	}
+	*/
 }

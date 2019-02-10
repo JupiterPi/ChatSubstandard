@@ -3,6 +3,7 @@ package jupiterpi.chatsubstandard.model.maprepositories;
 import java.util.Map;
 import java.util.HashMap;
 import jupiterpi.chatsubstandard.model.*;
+import jupiterpi.chatsubstandard.model.repositories.*;
 
 public class UserMapRepo implements UserRepo
 {

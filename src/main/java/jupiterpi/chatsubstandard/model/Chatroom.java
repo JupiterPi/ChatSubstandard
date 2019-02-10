@@ -7,6 +7,9 @@ public class Chatroom {
 	private List<Message> messages = new ArrayList<Message>();
 	private List<User> users = new ArrayList<User>();
 
+	public Chatroom() 
+	{ }
+	
 	public Chatroom (String name, boolean privateRoom)
 	{
 		this.name = name;

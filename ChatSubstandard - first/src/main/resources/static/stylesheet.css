@@ -1,0 +1,22 @@
+body
+{
+    font-family: Calibri;
+}
+
+table.headings
+{
+    border-bottom-style: solid;
+    border-color: black;
+    width: 100%;
+}
+
+td.headingsleft
+{
+    margin-left: 0%;
+}
+
+td.headingsright
+{
+    margin-right: 0%;
+    padding-right: 0%;
+}

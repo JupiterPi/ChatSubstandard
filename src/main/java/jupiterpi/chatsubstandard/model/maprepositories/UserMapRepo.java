@@ -8,6 +8,7 @@ import jupiterpi.chatsubstandard.model.repositories.*;
 public class UserMapRepo implements UserRepo
 {
     private Map<String, User> repo = new HashMap<String, User>();
+    private FileTool usersFile = new FileTool ("users.txt");
     
     @Override
 	public User findByUsername (String username)

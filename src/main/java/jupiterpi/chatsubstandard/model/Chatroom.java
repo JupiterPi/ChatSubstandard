@@ -15,6 +15,11 @@ public class Chatroom {
 		this.name = name;
 		this.privateRoom = privateRoom;
 	}
+
+	public Chatroom (String name)
+	{
+		this.name = name;
+	}
 	
 	public String getName() {
 		return name;

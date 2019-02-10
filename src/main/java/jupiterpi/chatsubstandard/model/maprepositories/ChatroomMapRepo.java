@@ -18,7 +18,8 @@ public class ChatroomMapRepo implements ChatroomRepo
     
 	public void readFromFile(String filename)
 	{
-		for (String line : chatroomsFile.getFile().toArray())
+		List<String> list = chatroomsFile.getFile();
+		for (String line : list )
 		{
 			String[] f = line.split(";");
 			repo.put (f[0], new Chatroom (f[1], Boolean.valueOf(f[2])));

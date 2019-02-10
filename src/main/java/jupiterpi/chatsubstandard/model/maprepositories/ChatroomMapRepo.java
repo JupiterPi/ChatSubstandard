@@ -15,6 +15,11 @@ public class ChatroomMapRepo implements ChatroomRepo
 	{
 		return repo.get(name);
 	}
+	@Override
+	public Collection<Chatroom> findAll ()
+	{
+		return repo.values();
+	}
     
 	public void readFromFile(String filename)
 	{

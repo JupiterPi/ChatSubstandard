@@ -6,14 +6,16 @@ import jupiterpi.chatsubstandard.model.repositories.*;
 
 public class MessageMapRepo implements MessageRepo 
 {
-	Map<String,Message> repo = new HashMap<String,Message>();
+	Map<String, Message> repo = new HashMap<String, Message> ();
 	
 	@Override
-	public Message findById(UUID id) {
+	public Message findById(UUID id)
+	{
 		return repo.get(id);
 	}
     
-    public void readFromFile(String filename) {
-    	
-    }
+	public void readFromFile(String filename)
+	{
+		
+	}
 }

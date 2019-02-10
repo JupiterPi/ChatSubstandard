@@ -7,7 +7,7 @@ import javax.swing.*;
 public class FileTool
 {
 	private String fileName;
-	private ArrayList file = new ArrayList();
+	private ArrayList<String> file = new ArrayList<String>();
 	
 	public FileTool (String fileName)
 	{
@@ -33,7 +33,7 @@ public class FileTool
 		}
 	}
 	
-	public ArrayList getFile ()
+	public ArrayList<String> getFile ()
 	{
 		return file;
 	}

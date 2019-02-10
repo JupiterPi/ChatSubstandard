@@ -19,6 +19,5 @@ public class ChatSubstandard
         userRepo.readFromFile("user.txt");
         chatroomRepo.readFromFile("chatroom.txt");
         messageRepo.readFromFile("message.txt");
-        
     }
 }

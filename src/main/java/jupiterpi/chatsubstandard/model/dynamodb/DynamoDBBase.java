@@ -20,5 +20,4 @@ public class DynamoDBBase<T> {
 	protected List<T> findAll(Class<T> cl) {
 		return mapper.query(cl, query);
 	}
-	
 }

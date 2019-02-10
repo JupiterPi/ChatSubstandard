@@ -1,2 +1,2 @@
 # ChatSubstandard
-A little little Chat organisation Project
+A little little Chat organisation Project. 

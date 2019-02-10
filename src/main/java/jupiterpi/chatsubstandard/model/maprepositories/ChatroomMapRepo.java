@@ -10,4 +10,8 @@ public class ChatroomMapRepo implements ChatroomRepo{
 	public Chatroom findByName(String name) {
 		return repo.get(name);
 	}
+    
+    public void readFromFile(String filename) {
+    	
+    }
 }

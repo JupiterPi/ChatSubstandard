@@ -13,4 +13,8 @@ public class UserMapRepo implements UserRepo
 	{
 		return repo.get(username);
 	}
+    
+    public void readFromFile(String filename) {
+    	
+    }
 }

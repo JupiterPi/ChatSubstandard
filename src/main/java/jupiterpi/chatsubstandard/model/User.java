@@ -1,4 +1,4 @@
-package jupiterpi.chatsubstandard;
+package jupiterpi.chatsubstandard.model;
 
 public class User
 {

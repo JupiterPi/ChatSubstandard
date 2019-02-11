@@ -1,5 +1,9 @@
 package jupiterpi.chatsubstandard.model;
 
+import java.util.*;
+
+import jupiterpi.chatsubstandard.model.repositories.RepositoryFactory;
+
 public class User
 {
     private String name;
@@ -33,5 +37,16 @@ public class User
 	public boolean isAdmin ()
 	{
 		return isAdmin;
+	}
+	
+	public Collection<Chatroom> getChatrooms() {
+		
+		Collection<ChatroomUser> chatroomUsers = RepositoryFactory.getChatroomUserRepo().findByUserName(name);
+		
+		Collection<Chatroom> chatrooms = new ArrayList<Chatroom>();
+		for (ChatroomUser chatroomUser : chatroomUsers) {
+			chatrooms.add(RepositoryFactory.getChatroomRepo().findByName(chatroomUser.getChatroomName()));
+		}
+		return chatrooms;
 	}
 }

@@ -8,6 +8,7 @@ public class ChatSubstandard
 	static UserMapRepo userRepo = new UserMapRepo(); 
 	static ChatroomMapRepo chatroomRepo = new ChatroomMapRepo();
 	static MessageMapRepo messageRepo = new MessageMapRepo();
+	static ChatroomUserMapRepo chatroomUserRepo = new ChatroomUserMapRepo();
 	
 	
     public static void main (String[] args)
@@ -19,5 +20,6 @@ public class ChatSubstandard
         userRepo.readFromFile("user.txt");
         chatroomRepo.readFromFile("chatroom.txt");
         messageRepo.readFromFile("message.txt");
+        chatroomUserRepo.readFromFile("chatroomUser.txt");
     }
 }

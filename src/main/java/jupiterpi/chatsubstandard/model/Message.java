@@ -3,41 +3,52 @@ package jupiterpi.chatsubstandard.model;
 import java.util.Date;
 import java.util.UUID;
 
+import jupiterpi.chatsubstandard.model.repositories.RepositoryFactory;
+
 public class Message 
 {
 	private UUID id;
-	private User sender;
+	private String senderName;
+	private String chatroomName;
 	private String message;
 	private Date time;
-	private Chatroom chatroom;
 
-	public Message (User sender, String message, Chatroom chatroom)
+//	private User sender;
+//	private Chatroom chatroom;
+
+	public Message (String senderName, String message, String chatroomName)
 	{
-		this.sender = sender;
+		this.senderName = senderName;
 		this.message = message;
-		this.chatroom = chatroom;
+		this.chatroomName = chatroomName;
 
 		id = UUID.randomUUID();
 		time = new Date();
 	}
 
-	public Message (User sender, String message, Chatroom chatroom, Date time)
+	public Message (String senderName, String message, String chatroomName, Date time)
 	{
-		this.id = UUID.randomUUID();
-		this.sender = sender;
+		this.senderName = senderName;
 		this.message = message;
+		this.chatroomName = chatroomName;
+
+		id = UUID.randomUUID();
 		this.time = time;
-		this.chatroom = chatroom;
 	}
 
 	public UUID getId ()
 	{
 		return id;
 	}
+	
+	public String getSenderName () 
+	{
+		return senderName;
+	}
 
 	public User getSender ()
 	{
-		return sender;
+		return RepositoryFactory.getUserRepo().findByUsername(senderName);
 	}
 
 	public String getMessage ()
@@ -49,9 +60,14 @@ public class Message
 	{
 		return time;
 	}
+	
+	public String getChatroomName () 
+	{
+		return chatroomName;
+	}
 
 	public Chatroom getChatroom ()
 	{
-		return chatroom;
+		return RepositoryFactory.getChatroomRepo().findByName(chatroomName);
 	}
 }

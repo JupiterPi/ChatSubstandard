@@ -1,12 +1,18 @@
 package jupiterpi.chatsubstandard.model;
 import java.util.*;
 
+import jupiterpi.chatsubstandard.model.repositories.RepositoryFactory;
+
 public class Chatroom {
+	
 	private String name;
-	private boolean privateRoom;
+	private boolean privateRoom;	
+	
+	/*
 	private List<Message> messages = new ArrayList<Message>();
 	private List<User> users = new ArrayList<User>();
-
+	*/
+	
 	public Chatroom() {}
 	
 	public Chatroom (String name, boolean privateRoom)
@@ -30,6 +36,7 @@ public class Chatroom {
 		return privateRoom;
 	}
 
+	/*
 	public void addMessage (Message message)
 	{
 		messages.add (message);
@@ -52,6 +59,23 @@ public class Chatroom {
 
 	public List<User> getUsers ()
 	{
+		return users;
+	}
+	*/
+	
+	public Collection<Message> getMessages() 
+	{
+		return RepositoryFactory.getMessageRepo().findByChatroom(name);
+	}
+	
+	public Collection<User> getUser() 
+	{
+		Collection<ChatroomUser> chatroomUsers =  RepositoryFactory.getChatroomUserRepo().findByChatroomName(name);
+		
+		Collection<User> users = new ArrayList<User>();
+		for (ChatroomUser chatroomUser : chatroomUsers) {
+			users.add(RepositoryFactory.getUserRepo().findByUsername(chatroomUser.getUserName()));
+		}
 		return users;
 	}
 }

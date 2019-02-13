@@ -19,5 +19,7 @@ public class ChatSubstandard
         userRepo.readFromFile("user.txt");
         chatroomRepo.readFromFile("chatroom.txt");
         messageRepo.readFromFile("message.txt");
+
+        System.out.println ("ICH BIN EIN KLEINER FROSCH!!!");
     }
 }

@@ -13,13 +13,5 @@ public class ChatSubstandard
     public static void main (String[] args)
     {
         System.out.println ("ALAAAAARMMMMM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Das ist nur ein Probealarm!!!");
-        
-        System.out.println("Einlesen der Files:");
-        
-        userRepo.readFromFile("user.txt");
-        chatroomRepo.readFromFile("chatroom.txt");
-        messageRepo.readFromFile("message.txt");
-
-        System.out.println ("ICH BIN EIN KLEINER FROSCH!!!");
     }
 }

@@ -6,18 +6,11 @@ public class Chatroom {
 	private boolean privateRoom;
 	private List<Message> messages = new ArrayList<Message>();
 	private List<User> users = new ArrayList<User>();
-
-	public Chatroom() {}
 	
 	public Chatroom (String name, boolean privateRoom)
 	{
 		this.name = name;
 		this.privateRoom = privateRoom;
-	}
-
-	public Chatroom (String name)
-	{
-		this.name = name;
 	}
 
 	public String getName ()

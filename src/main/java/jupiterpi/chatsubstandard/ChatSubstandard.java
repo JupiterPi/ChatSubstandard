@@ -4,14 +4,9 @@ import jupiterpi.chatsubstandard.model.*;
 import jupiterpi.chatsubstandard.model.maprepositories.*;
 
 public class ChatSubstandard
-{
-	static UserMapRepo userRepo = new UserMapRepo(); 
-	static ChatroomMapRepo chatroomRepo = new ChatroomMapRepo();
-	static MessageMapRepo messageRepo = new MessageMapRepo();
-	
-	
+{	
     public static void main (String[] args)
     {
-        System.out.println ("ALAAAAARMMMMM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Das ist nur ein Probealarm!!!");
+        System.out.println ("ALAAAAARMMMMM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Das ist nur ein Probealarm!!!");   
     }
 }
